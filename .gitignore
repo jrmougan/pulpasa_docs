@@ -1,0 +1,40 @@
+# Archivos de compilación
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.lof
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.run.xml
+*.bcf
+
+# Archivos de salida (PDF, DVI, PS)
+*.pdf
+*.dvi
+*.ps
+
+# Archivos temporales
+*.tmp
+*.swp
+*.bak
+*.backup
+
+# Archivos de editores
+*.synctex
+*.synctex(busy)
+*.gz
+*.xdv
+
+# Archivos de imágenes temporales (si usas TikZ o PStricks)
+*.tp*
+*.vrb
+*.pgf-plot.*
+
+# Archivos de LaTeXmk
+latexmkrc

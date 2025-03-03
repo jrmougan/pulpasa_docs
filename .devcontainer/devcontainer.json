@@ -1,0 +1,81 @@
+{
+  "image": "ghcr.io/jmuchovej/devcontainers/latex:2024",
+  "name": "LaTeX",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "aaron-bond.better-comments",
+        "vscodevim.vim",
+        "shardulm94.trailing-spaces",
+        "stkb.rewrap"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.tex": "latex"
+        },
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.latex.watch.enabled": true,
+        "latex-workshop.synctex.synctexjs.enabled": true,
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "xelatex -> biber -> xelatex* 2",
+            "tools": [
+              "xelatex",
+              "biber",
+              "xelatex",
+              "xelatex"
+            ]
+          },
+          {
+            "name": "latexmk",
+            "tools": [
+              "latexmk"
+            ]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "xelatex",
+            "command": "latexmk",
+            "args": [
+              "--shell-escape",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-xelatex", // ✅ Cambio de "-xetex" a "-xelatex"
+              "%DOC%"
+            ]
+          },
+          {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+              "%DOCFILE%"
+            ]
+          },
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-pdf",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ]
+          }
+        ],
+        "latex-workshop.synctex.afterBuild.enabled": true
+      }
+    }
+  },
+  "remoteUser": "root",
+  "postStartCommand": "tlmgr update --self && tlmgr install xetex biber latexmk biblatex titling zlmtt xkeyval"
+}
