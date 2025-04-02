@@ -61,8 +61,8 @@ romaría ou festa. O estilo visual será “Cartoon”.
 %image
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{images/pulpasa_logo.png}
-    \caption{Boceto Logo PulpaSA}
+    \includegraphics[width=0.2\textwidth]{images/pulpasa_logo.png}
+    \caption{Logo PulpaSA}
     \label{fig:Boceto Logo PulpaSA}
 \end{figure}
 
@@ -286,7 +286,7 @@ Os xogadores traballan nunha pulpería ambulante durante unha romaría galega, o
 \subsection{Sipnose}
 
 Un grupo de amigos norteamericanos, que orixinariamente traballaban arreo nunha consultoría de software, e eran víctimas do burnout, deciden
-abandonar todo e montar unha pulpería coa que percorrerán toda a xeografía galega en busca de romarías onde poidan ir acadando boa fama.
+abandonar todo e montar unha pulpería moi influenciada pola cultura Fast-Food americana, coa que percorrerán toda a xeografía galega en busca de romarías onde poidan ir acadando boa fama.
  Todo isto ocorre despois de que o grupo viñese de vacacións a Galicia, e quedasen ledos coa cultura
 e tradición. A idea de montar unha pulpería ambulante xurdiu nunha noite de copas, e aínda que ao principio parecía unha idea disparatada,
 acabou por materializarse. O inicio non será fácil... pero coa tua axuda, poderán conseguilo!
@@ -363,4 +363,128 @@ Os personaxes non teñen unha transformación, dado que é un xogo de xestión, 
 
 \footnotetext[1]{Todos os personaxes teñen a mesma relevancia no xogo.}
 \footnotetext[2]{As habilidades poderán mudar durante a fase de probas, co obxectivo de equilibrar a dificultade.}
+
+\newpage
+\section{Deseño de nivel DEMO}
+\subsection{Boceto}
+Estrutura semiaberta con zonas de interacción divididas por función (corte, preparacion, entrega,...). O escenario
+será un campo de terra con céspede, cuxo entorno decoraráse con elementos característicos duna romaría ou festa.
+
+\subsubsection{Burbullas ou etapas do nivel}
+\begin{itemize}
+    \item \textbf{Zona de preparación}: Mesas para cortar ingredientes (pulpo ou cachelos)
+    \item \textbf{Zona de cocción}: Olla para cocer os ingredientes
+    \item \textbf{Zona de preparación e entrega}: Aplicar especiado no nivel requerido pola comanda e entregar a cliente
+    \item \textbf{Zona de almacenamento}: Espazo para almacenar os ingredientes básicos (cachelos, polbo, sal, aceite, pimentón)
+    \item \textbf{Eventos de entorno}: Interrupcións externas (por exemplo, un grupo de gaiteiros que pasan pola zona de preparación)
+\end{itemize}
+\subsubsection{Obxectivos}
+
+% taboa de obxectivos e detalle do obxectivo
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3} % Aumenta la altura de las filas
+    \setlength{\tabcolsep}{10pt} % Espaciado entre columnas
+    \label{tab:obxectivos}
+    \rowcolors{2}{gray!15}{white} % Colores alternos en las filas
+    \begin{tabular}{|p{4cm}|p{9cm}|}
+        \hline
+        \rowcolor{octopus} % Color de fondo para la fila del encabezado
+        \textbf{Obxectivo}  & \textbf{Detalle} \\
+        \hline
+        Servir o obxectivo de comandas no prazo requerido & As comandas serán o resultado da ausencia presencia de cachelos, patacas, pementou ou sal \\
+        \hline
+        Introducir Mecánicas básicas & O xogador deberá aprender a cortar, cocer e condimentar os ingredientes \\
+        \hline
+        Coordinarse (cooperativo) & O xogador deberá coordinarse co resto de xogadores para conseguir o obxectivo \\
+        \hline
+    \end{tabular}
+    \caption{Táboa de Obxectivos}
+\end{table}
+
+\subsubsection{Obstáculos}
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3} % Aumenta la altura de las filas
+    \setlength{\tabcolsep}{10pt} % Espaciado entre columnas
+    \label{tab:obstaculos}
+    \rowcolors{2}{gray!15}{white} % Colores alternos en las filas
+    \begin{tabular}{|p{4cm}|p{9cm}|}
+        \hline
+        \rowcolor{octopus} % Color de fondo para la fila del encabezado
+        \textbf{Obstáculo}  & \textbf{Detalle} \\
+        \hline
+        Terreo irregular & Algunhas zonas poden ter barro e o personaxe podería esvarar \\
+        \hline
+        Paciencia Cliente & Debaixo de cada comanda, aleatoriamente poderíase activar un timeout que indicaria a paciencia do cliente (tempo de espera) \\
+        \hline
+    \end{tabular}
+    \caption{Táboa de Obstáculos}
+\end{table}
+
+\subsubsection{Elementos de ambiente/script}
+% taboa de elementos de ambiente e script
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3} % Aumenta la altura de las filas
+    \setlength{\tabcolsep}{10pt} % Espaciado entre columnas
+    \label{tab:elementos}
+    \rowcolors{2}{gray!15}{white} % Colores alternos en las filas
+    \begin{tabular}{|p{4cm}|p{9cm}|}
+        \hline
+        \rowcolor{octopus} % Color de fondo para la fila del encabezado
+        \textbf{Elemento}  & \textbf{Detalle} \\
+        \hline
+        Obxectos interactivos & Mesas, cociña, ollas, pratos, etc. \\
+        \hline
+        Personaxes NPC & Clientes que demandan comida e que se van marchando cando non son atendidos \\
+        \hline
+        Cliente Impaciente & Cliente que se marcha sen ser atendido porque se lle esgota a paciencia \\
+        \hline
+        Son ambiental & Son ambiental que aporte atmósfera \\
+        \hline
+    \end{tabular}
+    \caption{Táboa de Elementos de ambiente}
+\end{table}
+
+
+
+\subsection{Características}
+
+\subsection{Elementos}
+
+\subsubsection{Assets}
+
+\subsubsection{Elementos UI}
+
+\subsubsection{Personaxes}
+
+\subsection{Música}
+% tabla clasificada por familias, DX, MX, FOL y BG
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3} % Aumenta la altura de las filas
+    \setlength{\tabcolsep}{10pt} % Espaciado entre columnas
+    \label{tab:mecanicas}
+    \rowcolors{2}{gray!15}{white} % Colores alternos en las filas
+    \begin{tabular}{|p{4cm}|p{2cm}|p{3cm}|p{4cm}|}
+        \hline
+        \rowcolor{octopus} % Color de fondo para la fila del encabezado
+        \textbf{Familia}  & \textbf{Tipo} & \textbf{Necesidad} & \textbf{Reglas} \\
+        \hline
+        DX  & Primaria  & Interaccion con obxectos  & Os xogadores deben xestionar pedidos de clientes \\
+        \hline
+        MX  & Primaria  & Multixogador    & Se permite atacar enemigos con un arma o golpe cuerpo a cuerpo. \\
+        \hline
+        FOL  & Secundaria & Interacción con obxectos & Cortar cachelos/polbo antes de cocelos \\
+        \hline
+        BG & Secundaria & Xestión do transcurso do tempo / FSM & Estar pendente da cocción dos ingredientes \\
+        \hline
+
+    \end{tabular}
+    \caption{Táboa de sons e música}
+\end{table}
 \end{document}
