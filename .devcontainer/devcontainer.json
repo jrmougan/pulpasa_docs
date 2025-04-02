@@ -1,5 +1,5 @@
 {
-  "image": "ghcr.io/jmuchovej/devcontainers/latex:2024",
+  "image": "ghcr.io/jmuchovej/devcontainers/latex:2025",
   "name": "LaTeX",
   "customizations": {
     "vscode": {
